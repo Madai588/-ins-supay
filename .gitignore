@@ -1,0 +1,9 @@
+Acceso_Contrase*
+node_modules/
+.env
+config/conexion.php
+config/produccion.php
+config/produccion.php
+backups/
+config/constantes.php
+database/supay_actual.*

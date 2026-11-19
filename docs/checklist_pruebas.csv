@@ -1,0 +1,19 @@
+codigo,caso de prueba,pasos,resultado esperado,resultado obtenido,aprobado/no,historia
+PV01,Login campos vacíos,"Login; usuario y contraseña vacíos; enviar",Mensaje de campos obligatorios,, ,HU01
+PV02,Contraseña menor a 8,"Usuario admin; contraseña Ab1!",Rechazo por política,, ,HU01
+PV03,Bloqueo tras 3 intentos,"Usuario admin; Incorrecta1! tres veces",Bloqueo 15 minutos,, ,HU01
+PV04,Cantidad inválida,"Material Madera mara; cantidades -1, 0 y abc",Rechazo claro,, ,HU06
+PV05,Venta incompleta,"Cliente instrumento y total vacíos",No guarda y señala faltantes,, ,HU09
+PV06,QR único,"Registrar dos instrumentos",Códigos SUPAY-INS-000003 y SUPAY-INS-000004 distintos,, ,HU03
+PV07,Luthier sin finanzas,"Login luthier; abrir reportes.php",HTTP 403 Acceso denegado,, ,HU01
+PI01,Repuesto descuenta stock,"Reparación 1; Perno 8 mm; cantidad 2",Stock baja 2 y aparece salida,, ,HU05
+PI02,Salida al mínimo,"Aro metálico stock 6 mínimo 1; salida 5",Alerta y stock 1,, ,HU08
+PI03,Historial QR,"Escanear o escribir SUPAY-INS-000001",Historial completo visible,, ,HU04
+PI04,Estado en historial,"Cambiar reparación 1 a finalizado",Historial muestra finalizado,, ,HU02
+PI05,Cobro en reportes,"Cobro reparación 1 por Bs 150.00",Reporte incluye Bs 150.00,, ,HU10
+PI06,Venta en reportes,"Venta cliente ejemplo instrumento 1 por Bs 500.00",Reporte incluye Bs 500.00,, ,HU09
+PA01,Flujo comercial admin,"Admin registra venta y cobro",Se guardan sin ayuda,, ,HU09/HU10
+PA02,Flujo técnico luthier,"Luthier registra diagnóstico y consulta QR",Historial visible,, ,HU02/HU04
+PA03,Control inventario,"Admin registra entrada/salida y abre panel",Stock y alerta correctos,, ,HU06/HU08
+PA04,Coincidencia reportes,"Comparar Bs 500 venta y Bs 150 cobro",Totales coinciden,, ,HU11
+PA05,Respaldo y restauración,"Generar respaldo; crear dato temporal; restaurar",Dato temporal desaparece,, ,HU12

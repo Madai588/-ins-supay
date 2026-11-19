@@ -1,0 +1,1 @@
+<?php require_once __DIR__.'/config/sesion.php'; if(!isset($_SESSION['usuario'])) header('Location: /supay/modules/auth/login.php'); elseif($_SESSION['usuario']['rol']==='administrador') header('Location: /supay/modules/admin/index.php'); else header('Location: /supay/modules/tecnico/index.php'); exit;
